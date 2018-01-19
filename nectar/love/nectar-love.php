@@ -117,10 +117,10 @@ class NectarLove {
 		$output = $this->love_post($post->ID);
   
   		$class = 'nectar-love';
-  		$title = __('Love this', NECTAR_THEME_NAME);
+  		$title = __('Love this', tavoweb);
 		if( isset($_COOKIE['nectar_love_'. $post->ID]) ){
 			$class = 'nectar-love loved';
-			$title = __('You already love this!', NECTAR_THEME_NAME);
+			$title = __('You already love this!', tavoweb);
 		}
 
 		$options = get_nectar_theme_options(); 
@@ -133,9 +133,9 @@ class NectarLove {
 		if( isset($_COOKIE['nectar_love_'. $post->ID])) $heart_icon = '<i class="icon-salient-heart-2 loved"></i>';
 		
 		if( ($post->post_type == 'post' && is_single()) && $post_header_style == 'default_minimal') {
-			return '<a href="#" class="'. $class .'" id="nectar-love-'. $post->ID .'" title="'. $title .'"> '.$heart_icon . __('Love',NECTAR_THEME_NAME) . '<span class="total_loves">' . $output . '</span></a>';
+			return '<a href="#" class="'. $class .'" id="nectar-love-'. $post->ID .'" title="'. $title .'"> '.$heart_icon . __('Love',tavoweb) . '<span class="total_loves">' . $output . '</span></a>';
 		} else if(($post->post_type == 'post' && is_single()) && $post_header_style == 'fullscreen') {
-			return '<a href="#" class="'. $class .'" id="nectar-love-'. $post->ID .'" title="'. $title .'"> '.$heart_icon . $output .' <span class="love-txt plural">'.__("Loves",NECTAR_THEME_NAME).'</span><span class="love-txt single">'.__("Love",NECTAR_THEME_NAME).'</span></a>';
+			return '<a href="#" class="'. $class .'" id="nectar-love-'. $post->ID .'" title="'. $title .'"> '.$heart_icon . $output .' <span class="love-txt plural">'.__("Loves",tavoweb).'</span><span class="love-txt single">'.__("Love",tavoweb).'</span></a>';
 		} else {
 			return '<a href="#" class="'. $class .'" id="nectar-love-'. $post->ID .'" title="'. $title .'"> '.$heart_icon . $output .'</a>';
 		}

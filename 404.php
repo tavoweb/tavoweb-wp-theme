@@ -10,7 +10,7 @@
 				
 				<div id="error-404">
 					<h1>404</h1>
-					<h2><?php echo __('Not Found', NECTAR_THEME_NAME); ?></h2>
+					<h2><?php echo __('Not Found', tavoweb); ?></h2>
 				</div>
 				
 			</div><!--/span_12-->

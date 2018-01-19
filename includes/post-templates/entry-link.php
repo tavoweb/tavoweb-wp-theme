@@ -103,7 +103,7 @@ $layout == 'masonry-blog-sidebar' || $layout == 'masonry-blog-fullwidth' || $lay
 						$categories = get_the_category();
 						if ( ! empty( $categories ) ) {
 
-							echo '<span class="in">'. __('In', NECTAR_THEME_NAME) . ' </span>';
+							echo '<span class="in">'. __('In', tavoweb) . ' </span>';
 
 							$output = null;
 							$cat_count = 0;

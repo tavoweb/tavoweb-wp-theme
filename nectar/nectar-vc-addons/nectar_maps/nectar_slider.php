@@ -17,9 +17,9 @@
 	if (empty($locations)) {
 		$location_desc = 
 	      '<div class="alert">' .
-		 __('You currently don\'t have any Slider Locations setup. Please create some and add assign slides to them before using this!',NECTAR_THEME_NAME). 
+		 __('You currently don\'t have any Slider Locations setup. Please create some and add assign slides to them before using this!',tavoweb). 
 		'<br/><br/>
-		<a href="' . admin_url('edit.php?post_type=nectar_slider') . '">'. __('Link to Nectar Slider', NECTAR_THEME_NAME) . '</a>
+		<a href="' . admin_url('edit.php?post_type=nectar_slider') . '">'. __('Link to Nectar Slider', tavoweb) . '</a>
 		</div>';
 	} else { $location_desc = ''; }
 

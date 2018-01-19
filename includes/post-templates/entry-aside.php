@@ -79,13 +79,13 @@ $using_masonry = null; ?>
 				} ?>
 				
 				<div class="aside-inner">
-					<h2 class="title"><?php the_content('<span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) . '</span>'); ?></h2>
+					<h2 class="title"><?php the_content('<span class="continue-reading">'. __("Read More", tavoweb) . '</span>'); ?></h2>
 					<span title="Aside" class="icon"></span>
 					
 					<?php if( !is_single() ) { ?>
 					<div class="post-header">
-						<span class="meta-author"><span><?php echo __('By', NECTAR_THEME_NAME); ?></span> <?php the_author_posts_link(); ?></span> <span class="meta-category">| <?php the_category(', '); ?></span> <span class="meta-comment-count">| <a href="<?php comments_link(); ?>">
-						<?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a></span>
+						<span class="meta-author"><span><?php echo __('By', tavoweb); ?></span> <?php the_author_posts_link(); ?></span> <span class="meta-category">| <?php the_category(', '); ?></span> <span class="meta-comment-count">| <a href="<?php comments_link(); ?>">
+						<?php comments_number( __('No Comments', tavoweb), __('One Comment ', tavoweb), __('% Comments', tavoweb) ); ?></a></span>
 					</div><!--/post-header-->
 					
 				<?php } ?>

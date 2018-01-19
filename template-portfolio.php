@@ -123,10 +123,10 @@ $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 			?>
 			<div class="<?php echo $filters_id .' '; echo $filters_width; if($span_num != 'elastic-portfolio-item') echo 'non-fw'; ?>" data-color-scheme="default">
 				<div class="container">
-					<span id="current-category"><?php echo __('All', NECTAR_THEME_NAME); ?></span>
+					<span id="current-category"><?php echo __('All', tavoweb); ?></span>
 					<ul>
-					   <li id="sort-label"><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',NECTAR_THEME_NAME); ?>:</li>
-					   <li><a href="#" data-filter="*"><?php echo __('All', NECTAR_THEME_NAME); ?></a></li>
+					   <li id="sort-label"><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',tavoweb); ?>:</li>
+					   <li><a href="#" data-filter="*"><?php echo __('All', tavoweb); ?></a></li>
 	               	   <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'project-type', 'show_option_none'   => '', 'walker' => new Walker_Portfolio_Filter())); ?>
 					</ul>
 					<div class="clear"></div>
@@ -326,11 +326,11 @@ $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 
 										       echo '<a href="'. $featured_image[0].'"'; 
 										       if(!empty($project_image_caption)) echo 'title="'.$project_image_caption.'"';
-										       echo 'class="pretty_photo default-link">'.__("View Larger", NECTAR_THEME_NAME).'</a> ';
+										       echo 'class="pretty_photo default-link">'.__("View Larger", tavoweb).'</a> ';
 										    }
 											
 											if($lightbox_only != 'true') {
-										    	echo '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", NECTAR_THEME_NAME).'</a>'; 
+										    	echo '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", tavoweb).'</a>'; 
 										    } ?>
 										    
 										</div><!--/vert-center-->
@@ -1346,7 +1346,7 @@ $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 				    $format = empty( $permalink_structure ) ? '&paged=%#%' : 'page/%#%/';  
 				    if ($total_pages > 1){  
 				      
-					  echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">';
+					  echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", tavoweb).'">';
 					   
 				      echo paginate_links(array(  
 				          'base' => get_pagenum_link(1) .'%_%', 
@@ -1366,7 +1366,7 @@ $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 				$masonry_padding = ($project_style == '1') ? 'alt-style-padding' : null;
 				
 				if( get_next_posts_link() || get_previous_posts_link() ) { 
-					echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">
+					echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", tavoweb).'">
 					      <div class="prev">'.get_previous_posts_link('&laquo; Previous Entries').'</div>
 					      <div class="next">'.get_next_posts_link('Next Entries &raquo;','').'</div>
 				          </div>';

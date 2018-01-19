@@ -219,10 +219,10 @@ $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 										
 										//image
 									    else {
-									       echo '<a href="'. $featured_image[0].'" class="pretty_photo default-link" >'.__("View Larger", NECTAR_THEME_NAME).'</a> ';
+									       echo '<a href="'. $featured_image[0].'" class="pretty_photo default-link" >'.__("View Larger", tavoweb).'</a> ';
 									    }
 										
-									    echo '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", NECTAR_THEME_NAME).'</a>'; ?>
+									    echo '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", tavoweb).'</a>'; ?>
 									    
 									</div><!--/vert-center-->
 								</div>
@@ -858,7 +858,7 @@ $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 				    $format = empty( $permalink_structure ) ? '&paged=%#%' : 'page/%#%/';  
 				    if ($total_pages > 1){  
 				      
-					  echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">';
+					  echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", tavoweb).'">';
 					   
 				      echo paginate_links(array(  
 				          'base' => get_pagenum_link(1) .'%_%', 
@@ -879,7 +879,7 @@ $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 					$fw_pagination = ($span_num == 'elastic-portfolio-item') ? 'fw-pagination': null;
 					$masonry_padding = ($project_style != '1') ? 'alt-style-padding' : null;
 					 
-					echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">
+					echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", tavoweb).'">
 					      <div class="prev">'.get_previous_posts_link('&laquo; Previous Entries').'</div>
 					      <div class="next">'.get_next_posts_link('Next Entries &raquo;','').'</div>
 				          </div>';

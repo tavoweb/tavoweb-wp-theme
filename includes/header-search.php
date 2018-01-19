@@ -23,14 +23,14 @@ if(!empty($options['header-disable-ajax-search']) && $options['header-disable-aj
 				      		$theme_skin = ( !empty($options['theme-skin']) ) ? $options['theme-skin'] : 'original'; 
 
 				      		if($theme_skin == 'material') { ?>
-				      			<input type="text" name="s" <?php if($ajax_search == 'yes') { echo 'id="s"'; } ?> value="" placeholder="<?php echo __('Search', NECTAR_THEME_NAME); ?>" />
+				      			<input type="text" name="s" <?php if($ajax_search == 'yes') { echo 'id="s"'; } ?> value="" placeholder="<?php echo __('Search', tavoweb); ?>" />
 				      		<?php } else { ?> 
-				      			<input type="text" name="s" <?php if($ajax_search == 'yes') { echo 'id="s"'; } ?> value="<?php echo __('Start Typing...', NECTAR_THEME_NAME); ?>" data-placeholder="<?php echo __('Start Typing...', NECTAR_THEME_NAME); ?>" />
+				      			<input type="text" name="s" <?php if($ajax_search == 'yes') { echo 'id="s"'; } ?> value="<?php echo __('Start Typing...', tavoweb); ?>" data-placeholder="<?php echo __('Start Typing...', tavoweb); ?>" />
 				      		<?php } ?>
 				      	</form>
 								
-				      	<?php if($theme_skin == 'ascend' && $ajax_search == 'no') { echo '<span><i>'.__("Press enter to begin your search",NECTAR_THEME_NAME).'</i></span>'; }
-				      		    if($theme_skin == 'material') { echo '<span>' . __('Hit enter to search or ESC to close',NECTAR_THEME_NAME) . '</span>'; }
+				      	<?php if($theme_skin == 'ascend' && $ajax_search == 'no') { echo '<span><i>'.__("Press enter to begin your search",tavoweb).'</i></span>'; }
+				      		    if($theme_skin == 'material') { echo '<span>' . __('Hit enter to search or ESC to close',tavoweb) . '</span>'; }
 				      	?>
 			        </div><!--/span_12-->
 

@@ -207,7 +207,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 					
 					echo '<div class="content-inner">';
 					//on the single post page display the content
-					the_content('<span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) . '</span>'); 
+					the_content('<span class="continue-reading">'. __("Read More", tavoweb) . '</span>'); 
 				
 				
 				  global $options;
@@ -243,7 +243,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 						$categories = get_the_category();
 						if ( ! empty( $categories ) ) {
 
-							echo '<span class="in">'. __('In', NECTAR_THEME_NAME) . ' </span>';
+							echo '<span class="in">'. __('In', tavoweb) . ' </span>';
 
 							$output = null;
 							$cat_count = 0;
@@ -302,7 +302,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 								global $post;
 
 								if(empty( $post->post_excerpt ) && $use_excerpt != 'true') {
-									the_content('<span class="continue-reading">'. __("Continue Reading", NECTAR_THEME_NAME) . '</span>'); 
+									the_content('<span class="continue-reading">'. __("Continue Reading", tavoweb) . '</span>'); 
 								}
 								
 								//excerpt
@@ -313,7 +313,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 									the_excerpt();
 
 									echo '</div>';
-									echo '<a class="more-link" href="' . get_permalink() . '"><span class="continue-reading">'. __("Continue Reading", NECTAR_THEME_NAME) .'</span></a>';
+									echo '<a class="more-link" href="' . get_permalink() . '"><span class="continue-reading">'. __("Continue Reading", tavoweb) .'</span></a>';
 								}
 
 								?>
@@ -327,7 +327,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 						<?php 
 						if(is_single()){
 							//on the single post page display the content
-							the_content('<span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) . '</span>'); 
+							the_content('<span class="continue-reading">'. __("Read More", tavoweb) . '</span>'); 
 						} ?>
 						
 						<?php global $options;
@@ -457,11 +457,11 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 								</h<?php echo $h_num; ?>>
 
 								<?php if(!($masonry_type == 'classic_enhanced' && $using_masonry == true) &&  !($using_masonry == true && $masonry_type == 'material') ) { ?> 
-									<span class="meta-author"><span><?php echo __('By', NECTAR_THEME_NAME); ?></span> <?php the_author_posts_link(); ?></span> <span class="meta-category">| <?php the_category(', '); ?></span> 
+									<span class="meta-author"><span><?php echo __('By', tavoweb); ?></span> <?php the_author_posts_link(); ?></span> <span class="meta-category">| <?php the_category(', '); ?></span> 
 								
 									<?php if(comments_open()) { ?>
 										<span class="meta-comment-count">| <a href="<?php comments_link(); ?>">
-											<?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a>
+											<?php comments_number( __('No Comments', tavoweb), __('One Comment ', tavoweb), __('% Comments', tavoweb) ); ?></a>
 										</span>
 									<?php } ?>
 
@@ -474,7 +474,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 								//if no excerpt is set
 								global $post;
 								if(empty( $post->post_excerpt ) && $use_excerpt != 'true' && !($using_masonry == true && $masonry_type == 'classic_enhanced') && !($using_masonry == true && $masonry_type == 'material') ) {
-									the_content('<span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) . '</span>'); 
+									the_content('<span class="continue-reading">'. __("Read More", tavoweb) . '</span>'); 
 								}
 								
 								//excerpt
@@ -509,7 +509,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 									
 									
 									if(!($using_masonry == true && $masonry_type == 'material')) {  
-										echo '<a class="more-link" href="' . get_permalink() . '"><span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) .'</span></a>';
+										echo '<a class="more-link" href="' . get_permalink() . '"><span class="continue-reading">'. __("Read More", tavoweb) .'</span></a>';
 									}
 									
 								}
@@ -525,7 +525,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 					<?php 
 					if(is_single()){
 						//on the single post page display the content
-						the_content('<span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) . '</span>'); 
+						the_content('<span class="continue-reading">'. __("Read More", tavoweb) . '</span>'); 
 					} ?>
 					
 					<?php global $options;

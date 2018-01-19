@@ -22,7 +22,7 @@ $fw_class = (!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend
 <div class="comment-wrap <?php echo $fw_class;?>" data-midnight="dark">
 
 <?php if ( have_comments() ) : ?>
-	<h3 id="comments"><?php  if(!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend') echo '<span><i>'. __("Join the discussion", NECTAR_THEME_NAME).'</i></span>' ?> <?php comments_number(__('No Comments',NECTAR_THEME_NAME), __('One Comment', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) );?></h3>
+	<h3 id="comments"><?php  if(!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend') echo '<span><i>'. __("Join the discussion", tavoweb).'</i></span>' ?> <?php comments_number(__('No Comments',tavoweb), __('One Comment', tavoweb), __('% Comments', tavoweb) );?></h3>
 
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>
@@ -50,26 +50,26 @@ $fw_class = (!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend
 
 $required_text = null;
 $form_style = (!empty($options['form-style'])) ? $options['form-style'] : 'default'; 
-$comment_label = ($form_style == 'minimal') ? '<label for="comment">' . __('My comment is..', NECTAR_THEME_NAME) . '</label>' : null;
+$comment_label = ($form_style == 'minimal') ? '<label for="comment">' . __('My comment is..', tavoweb) . '</label>' : null;
 $args = array(
   'id_form'           => 'commentform',
   'id_submit'         => 'submit',
-  'title_reply'       => __( 'Leave a Reply', NECTAR_THEME_NAME ),
-  'title_reply_to'    => __( 'Leave a Reply to %s', NECTAR_THEME_NAME ),
-  'cancel_reply_link' => __( 'Cancel Reply', NECTAR_THEME_NAME ),
-  'label_submit'      => __( 'Submit Comment', NECTAR_THEME_NAME ),
+  'title_reply'       => __( 'Leave a Reply', tavoweb ),
+  'title_reply_to'    => __( 'Leave a Reply to %s', tavoweb ),
+  'cancel_reply_link' => __( 'Cancel Reply', tavoweb ),
+  'label_submit'      => __( 'Submit Comment', tavoweb ),
 
   'comment_field' =>  '<div class="row"><div class="col span_12">'.$comment_label.'<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></div>',
 
   'must_log_in' => '<p class="must-log-in">' .
     sprintf(
-      __( 'You must be <a href="%s">logged in</a> to post a comment.', NECTAR_THEME_NAME ),
+      __( 'You must be <a href="%s">logged in</a> to post a comment.', tavoweb ),
       wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
     ) . '</p>',
 
   'logged_in_as' => '<p class="logged-in-as">' .
     sprintf(
-    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', NECTAR_THEME_NAME ),
+    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', tavoweb ),
       admin_url( 'profile.php' ),
       $user_identity,
       wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
@@ -83,20 +83,20 @@ $args = array(
 
     'author' =>
       '<div class="row"> <div class="col span_4">' .
-      '<label for="author">' . __( 'Name', NECTAR_THEME_NAME ) .
+      '<label for="author">' . __( 'Name', tavoweb ) .
       ' <span class="required">*</span></label> ' .
       '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
       '" size="30" /></div>',
 
     'email' =>
-      '<div class="col span_4"><label for="email">' . __( 'Email', NECTAR_THEME_NAME ) .
+      '<div class="col span_4"><label for="email">' . __( 'Email', tavoweb ) .
       ' <span class="required">*</span></label>' .
       '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
       '" size="30" /></div>',
 
     'url' =>
       '<div class="col span_4 col_last"><label for="url">' .
-      __( 'Website', NECTAR_THEME_NAME ) . '</label>' .
+      __( 'Website', tavoweb ) . '</label>' .
       '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
       '" size="30" /></div></div>'
     )

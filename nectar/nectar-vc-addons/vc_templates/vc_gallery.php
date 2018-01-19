@@ -724,11 +724,11 @@ foreach ( $images as $attach_id ) {
 											$attachment_meta = wp_get_attachment($attach_id);
 
 											if(!empty($attachment_meta['image_url'])) {
-												echo '<div class="vert-center no-text"><a class="no-text" href="'.$attachment_meta['image_url'].'">'.__("View Larger", NECTAR_THEME_NAME).'</a> ';
+												echo '<div class="vert-center no-text"><a class="no-text" href="'.$attachment_meta['image_url'].'">'.__("View Larger", tavoweb).'</a> ';
 											} else {
 												echo '<div class="vert-center"><a ';
 												 if(!empty($attachment_meta['description'])) echo 'title="'.$attachment_meta['description'].'"';
-												echo ' href="'.$p_img_large[0].'" class="default-link pretty_photo">'.__("View Larger", NECTAR_THEME_NAME).'</a> ';
+												echo ' href="'.$p_img_large[0].'" class="default-link pretty_photo">'.__("View Larger", tavoweb).'</a> ';
 											} ?>
 											</div><!--/vert-center-->
 										<?php } ?>

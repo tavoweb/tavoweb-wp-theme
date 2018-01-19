@@ -413,7 +413,7 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false' || $page_full_s
 						
 						echo '<li id="mobile-search">  
 						<form action="'.home_url().'" method="GET">
-				      		<input type="text" name="s" value="" placeholder="'.__('Search..', NECTAR_THEME_NAME) .'" />
+				      		<input type="text" name="s" value="" placeholder="'.__('Search..', tavoweb) .'" />
 						</form> 
 						</li>';
 					}

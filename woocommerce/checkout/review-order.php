@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div>
 						<div class="product-info">
 							<?php echo '<h4>' . apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
-							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <span class="product-quantity">' . __('Quantity: ',NECTAR_THEME_NAME) . $cart_item['quantity'] . '</span></h4>', $cart_item, $cart_item_key ); ?>
+							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <span class="product-quantity">' . __('Quantity: ',tavoweb) . $cart_item['quantity'] . '</span></h4>', $cart_item, $cart_item_key ); ?>
 							<?php echo WC()->cart->get_item_data( $cart_item ); ?>
 							<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
 						</div>

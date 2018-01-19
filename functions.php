@@ -4,7 +4,7 @@
 # Default theme constants
 #-----------------------------------------------------------------#
 define('NECTAR_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/nectar/');
-define('NECTAR_THEME_NAME', 'salient');
+define('tavoweb', 'salient');
 
 #-----------------------------------------------------------------#
 # Load text domain
@@ -13,7 +13,7 @@ define('NECTAR_THEME_NAME', 'salient');
 add_action('after_setup_theme', 'lang_setup');
 function lang_setup(){
 	
-	load_theme_textdomain(NECTAR_THEME_NAME, get_template_directory() . '/lang');
+	load_theme_textdomain(tavoweb, get_template_directory() . '/lang');
 	
 }
 
@@ -1282,13 +1282,13 @@ if(!function_exists('nectar_nav_button_style')) {
 
         <p class="description description-wide">
 			<label for="<?php echo $name . "-". $item_id;?>">
-				<?php echo __( 'Menu Item Style',NECTAR_THEME_NAME); ?> <br />
+				<?php echo __( 'Menu Item Style',tavoweb); ?> <br />
 				<select id="<?php echo $name . "-". $item_id; ?>" class="widefat edit-menu-item-target" name="<?php echo $name . "[".$item_id."]"; ?>">
-					<option value="" <?php selected( $value,  ''); ?>><?php echo __('Standard', NECTAR_THEME_NAME); ?> </option>
-					<option value="button_solid_color" <?php selected( $value, 'button_solid_color'); ?>><?php echo __('Button Accent Color', NECTAR_THEME_NAME); ?> </option>
-					<option value="button_solid_color_2" <?php selected( $value, 'button_solid_color_2'); ?>><?php echo __('Button Extra Color #1', NECTAR_THEME_NAME); ?> </option>
-					<option value="button_bordered" <?php selected( $value, 'button_bordered'); ?>><?php echo __('Button Bordered Accent Color', NECTAR_THEME_NAME); ?> </option>
-					<option value="button_bordered_2" <?php selected( $value, 'button_bordered_2'); ?>><?php echo __('Button Bordered Extra Color #1', NECTAR_THEME_NAME); ?> </option>
+					<option value="" <?php selected( $value,  ''); ?>><?php echo __('Standard', tavoweb); ?> </option>
+					<option value="button_solid_color" <?php selected( $value, 'button_solid_color'); ?>><?php echo __('Button Accent Color', tavoweb); ?> </option>
+					<option value="button_solid_color_2" <?php selected( $value, 'button_solid_color_2'); ?>><?php echo __('Button Extra Color #1', tavoweb); ?> </option>
+					<option value="button_bordered" <?php selected( $value, 'button_bordered'); ?>><?php echo __('Button Bordered Accent Color', tavoweb); ?> </option>
+					<option value="button_bordered_2" <?php selected( $value, 'button_bordered_2'); ?>><?php echo __('Button Bordered Extra Color #1', tavoweb); ?> </option>
 				</select>
 			</label>
 		</p>
@@ -1374,20 +1374,20 @@ if (class_exists('WPBakeryVisualComposerAbstract') && defined( 'SALIENT_VC_ACTIV
 	}
 
 	function nectar_vc_library_cat_list() {
-		return array( __('All',NECTAR_THEME_NAME) => 'all', 
-			__('About',NECTAR_THEME_NAME) => 'about', 
-			__('Blog',NECTAR_THEME_NAME) => 'blog',  
-			__('Call To Action',NECTAR_THEME_NAME) => 'cta',
-			__('Counters',NECTAR_THEME_NAME) => 'counters',  
-			__('General',NECTAR_THEME_NAME) => 'general',  
-			__('Icons',NECTAR_THEME_NAME) => 'icons', 
-			__('Hero Section',NECTAR_THEME_NAME) => 'hero_section', 
-			__('Google Map',NECTAR_THEME_NAME) => 'map',
-			__('Project',NECTAR_THEME_NAME) => 'portfolio',
-			__('Pricing',NECTAR_THEME_NAME) => 'pricing',
-			__('Services',NECTAR_THEME_NAME) => 'services',
-			__('Team',NECTAR_THEME_NAME) => 'team',
-			__('Testimonials',NECTAR_THEME_NAME) => 'testimonials');
+		return array( __('All',tavoweb) => 'all', 
+			__('About',tavoweb) => 'about', 
+			__('Blog',tavoweb) => 'blog',  
+			__('Call To Action',tavoweb) => 'cta',
+			__('Counters',tavoweb) => 'counters',  
+			__('General',tavoweb) => 'general',  
+			__('Icons',tavoweb) => 'icons', 
+			__('Hero Section',tavoweb) => 'hero_section', 
+			__('Google Map',tavoweb) => 'map',
+			__('Project',tavoweb) => 'portfolio',
+			__('Pricing',tavoweb) => 'pricing',
+			__('Services',tavoweb) => 'services',
+			__('Team',tavoweb) => 'team',
+			__('Testimonials',tavoweb) => 'testimonials');
 	}
 
 	if(!function_exists('add_salient_studio_to_vc')) {
@@ -2360,7 +2360,7 @@ if (!function_exists('nectar_portfolio_video_popup_link')) {
 		}
 		
 		
-		$popup_link_text = ($project_style == '1') ? __("Watch Video", NECTAR_THEME_NAME) : '';
+		$popup_link_text = ($project_style == '1') ? __("Watch Video", tavoweb) : '';
 
 		 return $video_markup.'<a href="'.$project_video_link.'" class="pretty_photo default-link" >'.$popup_link_text.'</a>';	 
 	}
@@ -2393,22 +2393,22 @@ $nectar_disable_nectar_slider = (!empty($options['disable_nectar_slider_pt']) &&
 function slider_register() {  
     
 	$labels = array(
-	 	'name' => __( 'Slides', 'taxonomy general name', NECTAR_THEME_NAME),
-		'singular_name' => __( 'Slide', NECTAR_THEME_NAME),
-		'search_items' =>  __( 'Search Slides', NECTAR_THEME_NAME),
-		'all_items' => __( 'All Slides', NECTAR_THEME_NAME),
-		'parent_item' => __( 'Parent Slide', NECTAR_THEME_NAME),
-		'edit_item' => __( 'Edit Slide', NECTAR_THEME_NAME),
-		'update_item' => __( 'Update Slide', NECTAR_THEME_NAME),
-		'add_new_item' => __( 'Add New Slide', NECTAR_THEME_NAME),
-	    'menu_name' => __( 'Home Slider', NECTAR_THEME_NAME)
+	 	'name' => __( 'Slides', 'taxonomy general name', tavoweb),
+		'singular_name' => __( 'Slide', tavoweb),
+		'search_items' =>  __( 'Search Slides', tavoweb),
+		'all_items' => __( 'All Slides', tavoweb),
+		'parent_item' => __( 'Parent Slide', tavoweb),
+		'edit_item' => __( 'Edit Slide', tavoweb),
+		'update_item' => __( 'Update Slide', tavoweb),
+		'add_new_item' => __( 'Add New Slide', tavoweb),
+	    'menu_name' => __( 'Home Slider', tavoweb)
 	 );
 	 
 	 $homeslider_menu_icon = (floatval(get_bloginfo('version')) >= "3.8") ? 'dashicons-admin-home' : NECTAR_FRAMEWORK_DIRECTORY . 'assets/img/icons/home-slider.png';
 	 
 	 $args = array(
 			'labels' => $labels,
-			'singular_label' => __('Home Slider', NECTAR_THEME_NAME),
+			'singular_label' => __('Home Slider', tavoweb),
 			'public' => true,
 			'show_ui' => true,
 			'hierarchical' => false,
@@ -2490,8 +2490,8 @@ function nectar_home_slider_ordering() {
 function nectar_home_slider_order_page(){ ?>
 	
 	<div class="wrap">
-		<h2><?php echo __('Sort Slides', NECTAR_THEME_NAME); ?></h2>
-		<p><?php echo __('Simply drag the slide up or down and they will be saved in that order.', NECTAR_THEME_NAME); ?></p>
+		<h2><?php echo __('Sort Slides', tavoweb); ?></h2>
+		<p><?php echo __('Simply drag the slide up or down and they will be saved in that order.', tavoweb); ?></p>
 	<?php $slides = new WP_Query( array( 'post_type' => 'home_slider', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'menu_order' ) ); ?>
 	<?php if( $slides->have_posts() ) : ?>
 		
@@ -2500,9 +2500,9 @@ function nectar_home_slider_order_page(){ ?>
 		<table class="wp-list-table widefat fixed posts" id="sortable-table">
 			<thead>
 				<tr>
-					<th class="column-order"><?php echo __('Order', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-thumbnail"><?php echo __('Image', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-caption"><?php echo __('Caption', NECTAR_THEME_NAME); ?></th>
+					<th class="column-order"><?php echo __('Order', tavoweb); ?></th>
+					<th class="manage-column column-thumbnail"><?php echo __('Image', tavoweb); ?></th>
+					<th class="manage-column column-caption"><?php echo __('Caption', tavoweb); ?></th>
 				</tr>
 			</thead>
 			<tbody data-post-type="home_slider">
@@ -2533,9 +2533,9 @@ function nectar_home_slider_order_page(){ ?>
 			</tbody>
 			<tfoot>
 				<tr>
-					<th class="column-order"><?php echo __('Order', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-thumbnail"><?php echo __('Image', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-caption"><?php echo __('Caption', NECTAR_THEME_NAME); ?></th>
+					<th class="column-order"><?php echo __('Order', tavoweb); ?></th>
+					<th class="manage-column column-thumbnail"><?php echo __('Image', tavoweb); ?></th>
+					<th class="manage-column column-caption"><?php echo __('Caption', tavoweb); ?></th>
 				</tr>
 			</tfoot>
 
@@ -2630,22 +2630,22 @@ if($nectar_disable_home_slider != true) {
 function nectar_slider_register() {  
     
 	$labels = array(
-	 	'name' => __( 'Slides', 'taxonomy general name', NECTAR_THEME_NAME),
-		'singular_name' => __( 'Slide', NECTAR_THEME_NAME),
-		'search_items' =>  __( 'Search Slides', NECTAR_THEME_NAME),
-		'all_items' => __( 'All Slides', NECTAR_THEME_NAME),
-		'parent_item' => __( 'Parent Slide', NECTAR_THEME_NAME),
-		'edit_item' => __( 'Edit Slide', NECTAR_THEME_NAME),
-		'update_item' => __( 'Update Slide', NECTAR_THEME_NAME),
-		'add_new_item' => __( 'Add New Slide', NECTAR_THEME_NAME),
-	    'menu_name' => __( 'Nectar Slider', NECTAR_THEME_NAME)
+	 	'name' => __( 'Slides', 'taxonomy general name', tavoweb),
+		'singular_name' => __( 'Slide', tavoweb),
+		'search_items' =>  __( 'Search Slides', tavoweb),
+		'all_items' => __( 'All Slides', tavoweb),
+		'parent_item' => __( 'Parent Slide', tavoweb),
+		'edit_item' => __( 'Edit Slide', tavoweb),
+		'update_item' => __( 'Update Slide', tavoweb),
+		'add_new_item' => __( 'Add New Slide', tavoweb),
+	    'menu_name' => __( 'Nectar Slider', tavoweb)
 	 );
 	 
 	 $nectarslider_menu_icon = (floatval(get_bloginfo('version')) >= "3.8") ? 'dashicons-star-empty' : NECTAR_FRAMEWORK_DIRECTORY . 'assets/img/icons/nectar-slider.png';
 	 
 	 $args = array(
 			'labels' => $labels,
-			'singular_label' => __('Nectar Slider', NECTAR_THEME_NAME),
+			'singular_label' => __('Nectar Slider', tavoweb),
 			'public' => false,
 			'show_ui' => true,
 			'hierarchical' => false,
@@ -2660,15 +2660,15 @@ function nectar_slider_register() {
  
 
 $slider_locations_labels = array(
-	'name' => __( 'Slider Locations', NECTAR_THEME_NAME),
-	'singular_name' => __( 'Slider Location', NECTAR_THEME_NAME),
-	'search_items' =>  __( 'Search Slider Locations', NECTAR_THEME_NAME),
-	'all_items' => __( 'All Slider Locations', NECTAR_THEME_NAME),
-	'edit_item' => __( 'Edit Slider Location', NECTAR_THEME_NAME),
-	'update_item' => __( 'Update Slider Location', NECTAR_THEME_NAME),
-	'add_new_item' => __( 'Add New Slider Location', NECTAR_THEME_NAME),
-	'new_item_name' => __( 'New Slider Location', NECTAR_THEME_NAME),
-    'menu_name' => __( 'Slider Locations', NECTAR_THEME_NAME)
+	'name' => __( 'Slider Locations', tavoweb),
+	'singular_name' => __( 'Slider Location', tavoweb),
+	'search_items' =>  __( 'Search Slider Locations', tavoweb),
+	'all_items' => __( 'All Slider Locations', tavoweb),
+	'edit_item' => __( 'Edit Slider Location', tavoweb),
+	'update_item' => __( 'Update Slider Location', tavoweb),
+	'add_new_item' => __( 'Add New Slider Location', tavoweb),
+	'new_item_name' => __( 'New Slider Location', tavoweb),
+    'menu_name' => __( 'Slider Locations', tavoweb)
 ); 	
  
 register_taxonomy('slider-locations',
@@ -2775,8 +2775,8 @@ function nectar_slider_ordering() {
 function nectar_slider_order_page(){ ?>
 	
 	<div class="wrap" data-base-url="<?php echo admin_url('edit.php?post_type=nectar_slider&page=nectar-slide-order'); ?>">
-		<h2><?php echo __('Sort Slides', NECTAR_THEME_NAME); ?></h2>
-		<p><?php echo __('Choose your slider location below and simply drag your slides up or down - they will automatically be saved in that order.', NECTAR_THEME_NAME); ?></p>
+		<h2><?php echo __('Sort Slides', tavoweb); ?></h2>
+		<p><?php echo __('Choose your slider location below and simply drag your slides up or down - they will automatically be saved in that order.', tavoweb); ?></p>
 		
 	<?php 
 
@@ -2812,9 +2812,9 @@ function nectar_slider_order_page(){ ?>
 		<table class="wp-list-table widefat fixed posts" id="sortable-table">
 			<thead>
 				<tr>
-					<th class="column-order"><?php echo __('Order', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-thumbnail"><?php echo __('Image', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-caption"><?php echo __('Caption', NECTAR_THEME_NAME); ?></th>
+					<th class="column-order"><?php echo __('Order', tavoweb); ?></th>
+					<th class="manage-column column-thumbnail"><?php echo __('Image', tavoweb); ?></th>
+					<th class="manage-column column-caption"><?php echo __('Caption', tavoweb); ?></th>
 				</tr>
 			</thead>
 			<tbody data-post-type="nectar_slider">
@@ -2861,9 +2861,9 @@ function nectar_slider_order_page(){ ?>
 			</tbody>
 			<tfoot>
 				<tr>
-					<th class="column-order"><?php echo __('Order', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-thumbnail"><?php echo __('Image', NECTAR_THEME_NAME); ?></th>
-					<th class="manage-column column-caption"><?php echo __('Caption', NECTAR_THEME_NAME); ?></th>
+					<th class="column-order"><?php echo __('Order', tavoweb); ?></th>
+					<th class="manage-column column-thumbnail"><?php echo __('Image', tavoweb); ?></th>
+					<th class="manage-column column-caption"><?php echo __('Caption', tavoweb); ?></th>
 				</tr>
 			</tfoot>
 
@@ -3015,7 +3015,7 @@ if (!function_exists('nectar_slider_display')) {
 		 global $nectar_disable_nectar_slider;
 		 
 		 if($nectar_disable_nectar_slider == true) {
-		 	echo __('Nectar Slider Post Type Disabled - please reanble in the Salient options panel > General Settings > Toggle Theme Features tab.', NECTAR_THEME_NAME);
+		 	echo __('Nectar Slider Post Type Disabled - please reanble in the Salient options panel > General Settings > Toggle Theme Features tab.', tavoweb);
 		 	return false;
 		 }
 
@@ -3297,14 +3297,14 @@ if (!function_exists('nectar_slider_display')) {
 function portfolio_register() {  
     	 
 	 $portfolio_labels = array(
-	 	'name' => __( 'Portfolio', 'taxonomy general name', NECTAR_THEME_NAME),
-		'singular_name' => __( 'Portfolio Item', NECTAR_THEME_NAME),
-		'search_items' =>  __( 'Search Portfolio Items', NECTAR_THEME_NAME),
-		'all_items' => __( 'Portfolio', NECTAR_THEME_NAME),
-		'parent_item' => __( 'Parent Portfolio Item', NECTAR_THEME_NAME),
-		'edit_item' => __( 'Edit Portfolio Item', NECTAR_THEME_NAME),
-		'update_item' => __( 'Update Portfolio Item', NECTAR_THEME_NAME),
-		'add_new_item' => __( 'Add New Portfolio Item', NECTAR_THEME_NAME)
+	 	'name' => __( 'Portfolio', 'taxonomy general name', tavoweb),
+		'singular_name' => __( 'Portfolio Item', tavoweb),
+		'search_items' =>  __( 'Search Portfolio Items', tavoweb),
+		'all_items' => __( 'Portfolio', tavoweb),
+		'parent_item' => __( 'Parent Portfolio Item', tavoweb),
+		'edit_item' => __( 'Edit Portfolio Item', tavoweb),
+		'update_item' => __( 'Update Portfolio Item', tavoweb),
+		'add_new_item' => __( 'Add New Portfolio Item', tavoweb)
 	 );
 	 
 	 global $options;
@@ -3317,7 +3317,7 @@ function portfolio_register() {
 	 $args = array(
 			'labels' => $portfolio_labels,
 			'rewrite' => array('slug' => $custom_slug,'with_front' => false),
-			'singular_label' => __('Project', NECTAR_THEME_NAME),
+			'singular_label' => __('Project', tavoweb),
 			'public' => true,
 			'publicly_queryable' => true,
 			'show_ui' => true,
@@ -3342,15 +3342,15 @@ if (!function_exists('nectar_add_portfolio_taxonomies')) {
 	function nectar_add_portfolio_taxonomies(){
 
 		$category_labels = array(
-			'name' => __( 'Project Categories', NECTAR_THEME_NAME),
-			'singular_name' => __( 'Project Category', NECTAR_THEME_NAME),
-			'search_items' =>  __( 'Search Project Categories', NECTAR_THEME_NAME),
-			'all_items' => __( 'All Project Categories', NECTAR_THEME_NAME),
-			'parent_item' => __( 'Parent Project Category', NECTAR_THEME_NAME),
-			'edit_item' => __( 'Edit Project Category', NECTAR_THEME_NAME),
-			'update_item' => __( 'Update Project Category', NECTAR_THEME_NAME),
-			'add_new_item' => __( 'Add New Project Category', NECTAR_THEME_NAME),
-		    'menu_name' => __( 'Project Categories', NECTAR_THEME_NAME)
+			'name' => __( 'Project Categories', tavoweb),
+			'singular_name' => __( 'Project Category', tavoweb),
+			'search_items' =>  __( 'Search Project Categories', tavoweb),
+			'all_items' => __( 'All Project Categories', tavoweb),
+			'parent_item' => __( 'Parent Project Category', tavoweb),
+			'edit_item' => __( 'Edit Project Category', tavoweb),
+			'update_item' => __( 'Update Project Category', tavoweb),
+			'add_new_item' => __( 'Add New Project Category', tavoweb),
+		    'menu_name' => __( 'Project Categories', tavoweb)
 		); 	
 
 		register_taxonomy("project-type", 
@@ -3363,16 +3363,16 @@ if (!function_exists('nectar_add_portfolio_taxonomies')) {
 		));
 
 		$attributes_labels = array(
-			'name' => __( 'Project Attributes', NECTAR_THEME_NAME),
-			'singular_name' => __( 'Project Attribute', NECTAR_THEME_NAME),
-			'search_items' =>  __( 'Search Project Attributes', NECTAR_THEME_NAME),
-			'all_items' => __( 'All Project Attributes', NECTAR_THEME_NAME),
-			'parent_item' => __( 'Parent Project Attribute', NECTAR_THEME_NAME),
-			'edit_item' => __( 'Edit Project Attribute', NECTAR_THEME_NAME),
-			'update_item' => __( 'Update Project Attribute', NECTAR_THEME_NAME),
-			'add_new_item' => __( 'Add New Project Attribute', NECTAR_THEME_NAME),
-			'new_item_name' => __( 'New Project Attribute', NECTAR_THEME_NAME),
-		    'menu_name' => __( 'Project Attributes', NECTAR_THEME_NAME)
+			'name' => __( 'Project Attributes', tavoweb),
+			'singular_name' => __( 'Project Attribute', tavoweb),
+			'search_items' =>  __( 'Search Project Attributes', tavoweb),
+			'all_items' => __( 'All Project Attributes', tavoweb),
+			'parent_item' => __( 'Parent Project Attribute', tavoweb),
+			'edit_item' => __( 'Edit Project Attribute', tavoweb),
+			'update_item' => __( 'Update Project Attribute', tavoweb),
+			'add_new_item' => __( 'Add New Project Attribute', tavoweb),
+			'new_item_name' => __( 'New Project Attribute', tavoweb),
+		    'menu_name' => __( 'Project Attributes', tavoweb)
 		); 	
 
 		register_taxonomy('project-attributes',
@@ -3461,8 +3461,8 @@ function project_single_controls() {
 				<ul class="controls">                                 
 					<?php if($single_nav_pos == 'after_project') { ?>
 
-						<li id="prev-link"><?php be_next_post_link('%link','<i class="icon-angle-left"></i> <span>' . __("Previous Project", NECTAR_THEME_NAME) .'</span>' ,TRUE, null,'project-type'); ?></li>
-						<li id="next-link"><?php be_previous_post_link('%link', '<span>'. __('Next Project', NECTAR_THEME_NAME) . '</span><i class="icon-angle-right"></i>',TRUE, null, 'project-type'); ?></li> 
+						<li id="prev-link"><?php be_next_post_link('%link','<i class="icon-angle-left"></i> <span>' . __("Previous Project", tavoweb) .'</span>' ,TRUE, null,'project-type'); ?></li>
+						<li id="next-link"><?php be_previous_post_link('%link', '<span>'. __('Next Project', tavoweb) . '</span><i class="icon-angle-right"></i>',TRUE, null, 'project-type'); ?></li> 
 				
 					<?php } else { ?>
 
@@ -3489,7 +3489,7 @@ function project_single_controls() {
 			<div id="portfolio-nav">
 				<?php if($single_nav_pos != 'after_project_2') { ?>
 					<ul>
-						<li id="all-items"><a href="<?php echo $portfolio_link; ?>" title="<?php echo __('Back to all projects', NECTAR_THEME_NAME); ?>"><i class="icon-salient-back-to-all"></i></a></li>  
+						<li id="all-items"><a href="<?php echo $portfolio_link; ?>" title="<?php echo __('Back to all projects', tavoweb); ?>"><i class="icon-salient-back-to-all"></i></a></li>  
 					</ul>
 				<?php } ?>
 
@@ -3529,7 +3529,7 @@ function project_single_controls() {
 						$nextid = (isset($ids[$thisindex+1])) ? $ids[$thisindex+1] : null;
 						if ( !empty($previd) ) {
 						  if($single_nav_pos == 'after_project') 
-						  	 echo '<li id="prev-link" class="from-sing"><a href="' . get_permalink($previd). '"><i class="icon-angle-left"></i><span>'. __('Previous Project', NECTAR_THEME_NAME) .'</span></a></li>';
+						  	 echo '<li id="prev-link" class="from-sing"><a href="' . get_permalink($previd). '"><i class="icon-angle-left"></i><span>'. __('Previous Project', tavoweb) .'</span></a></li>';
 						 
 						  else if($single_nav_pos == 'after_project_2') {
 
@@ -3551,7 +3551,7 @@ function project_single_controls() {
 									echo '<div class="proj-bg-img" style="background-image: url('.$post_thumbnail_url.');"></div>';
 								} 	
 
-									echo '<a href="'.get_permalink($previous_post_id).'"></a><h3><span>'.__('Previous Project',NECTAR_THEME_NAME).'</span><span class="text">'.get_the_title($previous_post_id).'
+									echo '<a href="'.get_permalink($previous_post_id).'"></a><h3><span>'.__('Previous Project',tavoweb).'</span><span class="text">'.get_the_title($previous_post_id).'
 					<svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3>';
 							}
 							echo '</li>';
@@ -3564,7 +3564,7 @@ function project_single_controls() {
 						if ( !empty($nextid) ) {
 
 							 if($single_nav_pos == 'after_project') 
-						  	    echo '<li id="next-link" class="from-sing"><a href="' . get_permalink($nextid). '"><span>'. __('Next Project', NECTAR_THEME_NAME) .'</span><i class="icon-angle-right"></i></a></li>';
+						  	    echo '<li id="next-link" class="from-sing"><a href="' . get_permalink($nextid). '"><span>'. __('Next Project', tavoweb) .'</span><i class="icon-angle-right"></i></a></li>';
 							
 							else if($single_nav_pos == 'after_project_2') {
 
@@ -3588,7 +3588,7 @@ function project_single_controls() {
 										} 	
 									}
 
-									echo '<a href="'.get_permalink($next_post_id).'"></a><h3><span>'.__('Next Project',NECTAR_THEME_NAME).'</span><span class="text">'.get_the_title($next_post_id).'
+									echo '<a href="'.get_permalink($next_post_id).'"></a><h3><span>'.__('Next Project',tavoweb).'</span><span class="text">'.get_the_title($next_post_id).'
 						<svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3>';
 
 								echo '</li>';
@@ -3602,8 +3602,8 @@ function project_single_controls() {
 						
 					} else { ?>
 						<?php if($single_nav_pos == 'after_project') { ?>
-							<li id="prev-link"><?php next_post_link('%link','<i class="icon-angle-left"></i><span>'.__('Previous Project', NECTAR_THEME_NAME).'</span>'); ?></li>
-							<li id="next-link"><?php previous_post_link('%link', '<span>'. __('Next Project', NECTAR_THEME_NAME).'</span><i class="icon-angle-right"></i>'); ?></li> 
+							<li id="prev-link"><?php next_post_link('%link','<i class="icon-angle-left"></i><span>'.__('Previous Project', tavoweb).'</span>'); ?></li>
+							<li id="next-link"><?php previous_post_link('%link', '<span>'. __('Next Project', tavoweb).'</span><i class="icon-angle-right"></i>'); ?></li> 
 						<?php } 
 
 						else if($single_nav_pos == 'after_project_2') {
@@ -3629,7 +3629,7 @@ function project_single_controls() {
 									echo '<div class="proj-bg-img" style="background-image: url('.$post_thumbnail_url.');"></div>';
 								} 	
 
-									echo '<a href="'.get_permalink($previous_post_id).'"></a><h3><span>'.__('Previous Project',NECTAR_THEME_NAME).'</span><span class="text">'.$previous_post->post_title.'
+									echo '<a href="'.get_permalink($previous_post_id).'"></a><h3><span>'.__('Previous Project',tavoweb).'</span><span class="text">'.$previous_post->post_title.'
 					<svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3>';
 							}
 							echo '</li>';
@@ -3654,7 +3654,7 @@ function project_single_controls() {
 									} 	
 								}
 
-								echo '<a href="'.get_permalink($next_post_id).'"></a><h3><span>'.__('Next Project',NECTAR_THEME_NAME).'</span><span class="text">'.$next_post->post_title.'
+								echo '<a href="'.get_permalink($next_post_id).'"></a><h3><span>'.__('Next Project',tavoweb).'</span><span class="text">'.$next_post->post_title.'
 					<svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3>';
 
 							echo '</li>';
@@ -3664,8 +3664,8 @@ function project_single_controls() {
 						  }
 
 						else { ?> 
-							<li id="prev-link"><?php next_post_link('%link','<i class="icon-salient-left-arrow-thin"></i>'); ?><?php if($single_nav_pos == 'after_project') echo __('Previous Project', NECTAR_THEME_NAME); ?></li>
-							<li id="next-link"><?php if($single_nav_pos == 'after_project') echo __('Next Project', NECTAR_THEME_NAME); ?><?php previous_post_link('%link','<i class="icon-salient-right-arrow-thin"></i>'); ?></li> 
+							<li id="prev-link"><?php next_post_link('%link','<i class="icon-salient-left-arrow-thin"></i>'); ?><?php if($single_nav_pos == 'after_project') echo __('Previous Project', tavoweb); ?></li>
+							<li id="next-link"><?php if($single_nav_pos == 'after_project') echo __('Next Project', tavoweb); ?><?php previous_post_link('%link','<i class="icon-salient-right-arrow-thin"></i>'); ?></li> 
 						<?php } ?>
 
 					<?php } ?>                                   
@@ -3702,7 +3702,7 @@ if(is_admin()){
 add_action('media_buttons','nectar_buttons',100);
 
 function nectar_buttons() {
-     echo "<a data-effect='mfp-zoom-in' class='button nectar-shortcode-generator' href='#nectar-sc-generator'><img src='".get_template_directory_uri()."/nectar/assets/img/icons/n.png' /> ". __('Nectar Shortcodes', NECTAR_THEME_NAME)."</a>";
+     echo "<a data-effect='mfp-zoom-in' class='button nectar-shortcode-generator' href='#nectar-sc-generator'><img src='".get_template_directory_uri()."/nectar/assets/img/icons/n.png' /> ". __('Nectar Shortcodes', tavoweb)."</a>";
 }
 
 
@@ -3921,34 +3921,34 @@ function nectar_blog_social_sharing() {
 
 				//facebook
 				if(!empty($options['blog-facebook-sharing']) && $options['blog-facebook-sharing'] == 1) { 
-					echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'>  <i class='fa fa-facebook'></i> <span class='social-text'>".__('Share',NECTAR_THEME_NAME)."</span> <span class='count'></span></a>";
+					echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'>  <i class='fa fa-facebook'></i> <span class='social-text'>".__('Share',tavoweb)."</span> <span class='count'></span></a>";
 				}
 				//twitter
 				if(!empty($options['blog-twitter-sharing']) && $options['blog-twitter-sharing'] == 1) {
-					echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> <span class='social-text'>".__('Tweet',NECTAR_THEME_NAME)."</span> <span class='count'></span></a>";
+					echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', tavoweb)."'> <i class='fa fa-twitter'></i> <span class='social-text'>".__('Tweet',tavoweb)."</span> <span class='count'></span></a>";
 				}
 				
 				//google plus
 				if(!empty($options['blog-google-plus-sharing']) && $options['blog-google-plus-sharing'] == 1) {
-					echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> <span class='social-text'>".__('Share',NECTAR_THEME_NAME)."</span> <span class='count'>0</span></a>";
+					echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-google-plus'></i> <span class='social-text'>".__('Share',tavoweb)."</span> <span class='count'>0</span></a>";
 				}
 				
 				//linkedIn
 				if(!empty($options['blog-linkedin-sharing']) && $options['blog-linkedin-sharing'] == 1) {
-					echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> <span class='social-text'>".__('Share',NECTAR_THEME_NAME)."</span> <span class='count'> </span></a>";
+					echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-linkedin'></i> <span class='social-text'>".__('Share',tavoweb)."</span> <span class='count'> </span></a>";
 				}
 				
 				//pinterest
 				if(!empty($options['blog-pinterest-sharing']) && $options['blog-pinterest-sharing'] == 1) {
-					echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> <span class='social-text'>".__('Pin',NECTAR_THEME_NAME)."</span> <span class='count'></span></a>";
+					echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', tavoweb)."'> <i class='fa fa-pinterest'></i> <span class='social-text'>".__('Pin',tavoweb)."</span> <span class='count'></span></a>";
 				}
 			} else {
 				//facebook
-				echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
-				echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
-				echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
-				echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
-				echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
+				echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
+				echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', tavoweb)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
+				echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
+				echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
+				echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', tavoweb)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
 				
 			}
 			
@@ -4011,7 +4011,7 @@ function nectar_next_post_display() {
 									echo '<div class="post-bg-img" style="background-image: url('.$post_thumbnail_url.');"></div>';
 								} 	
 
-									echo '<a href="'.get_permalink($previous_post_id).'"></a><h3><span>'.__('Previous Post',NECTAR_THEME_NAME).'</span><span class="text">'.$previous_post->post_title.'
+									echo '<a href="'.get_permalink($previous_post_id).'"></a><h3><span>'.__('Previous Post',tavoweb).'</span><span class="text">'.$previous_post->post_title.'
 					<svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3>';
 							}
 							echo '</li>';
@@ -4036,7 +4036,7 @@ function nectar_next_post_display() {
 									} 	
 								}
 
-								echo '<a href="'.get_permalink($next_post_id).'"></a><h3><span>'.__('Next Post',NECTAR_THEME_NAME).'</span><span class="text">'.$next_post->post_title.'
+								echo '<a href="'.get_permalink($next_post_id).'"></a><h3><span>'.__('Next Post',tavoweb).'</span><span class="text">'.$next_post->post_title.'
 					<svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3>';
 
 							echo '</li></ul>';
@@ -4059,7 +4059,7 @@ function nectar_next_post_display() {
 
 						<div class="col span_12 dark left">
 						<div class="inner">
-							<span><?php echo '<i>'. __('Next Post',NECTAR_THEME_NAME) .'</i>'; ?></span>
+							<span><?php echo '<i>'. __('Next Post',tavoweb) .'</i>'; ?></span>
 							<?php previous_post_link('%link','<h3>%title</h3>'); ?>
 						</div>		
 					    </div>
@@ -4115,23 +4115,23 @@ function nectar_related_post_display() {
 	
 	$span_num = ($related_post_count == 2) ? 'span_6' : 'span_4';
 	
-	$related_title_text =  __("Related Posts", NECTAR_THEME_NAME);
+	$related_title_text =  __("Related Posts", tavoweb);
 	$related_post_title_option = (!empty($options['blog_related_posts_title_text'])) ? $options['blog_related_posts_title_text'] : 'Related Posts';
 	
 	switch($related_post_title_option){
 			case 'related_posts':
-		  	$related_title_text =  __("Related Posts", NECTAR_THEME_NAME);
+		  	$related_title_text =  __("Related Posts", tavoweb);
 				break;
 			
 			case 'similar_posts':
-			  $related_title_text =  __("Similar Posts", NECTAR_THEME_NAME);
+			  $related_title_text =  __("Similar Posts", tavoweb);
 				break;
 				
 			case 'you_may_also_like':
-			  $related_title_text =  __("You May Also Like", NECTAR_THEME_NAME);
+			  $related_title_text =  __("You May Also Like", tavoweb);
 				break;
 			case 'recommended_for_you':
-			  $related_title_text =  __("Recommended For You", NECTAR_THEME_NAME);
+			  $related_title_text =  __("Recommended For You", tavoweb);
 				break;
 	}
 	
@@ -4594,10 +4594,10 @@ if ( !function_exists( 'nectar_page_header' ) ) {
 							
 								<?php if($fullscreen_header != true) { ?>	
 									<div id="single-below-header">
-										<span class="meta-author vcard author"><span class="fn"><?php echo __('By', NECTAR_THEME_NAME); ?> <?php the_author_posts_link(); ?></span></span><!--
+										<span class="meta-author vcard author"><span class="fn"><?php echo __('By', tavoweb); ?> <?php the_author_posts_link(); ?></span></span><!--
 										--><span class="meta-date date updated"><?php echo get_the_date(); ?></span><!--
 										--><?php if($post_header_style != 'default_minimal') { ?> <span class="meta-category"><?php the_category(', '); ?></span> <?php } else { ?><!--
-										--><span class="meta-comment-count"><a href="<?php comments_link(); ?>"> <?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a></span>
+										--><span class="meta-comment-count"><a href="<?php comments_link(); ?>"> <?php comments_number( __('No Comments', tavoweb), __('One Comment ', tavoweb), __('% Comments', tavoweb) ); ?></a></span>
 									<?php } ?>
 									</div><!--/single-below-header-->
 								<?php } ?>
@@ -4610,7 +4610,7 @@ if ( !function_exists( 'nectar_page_header' ) ) {
 	  	
 									   
 										<li class="meta-comment-count">
-											<a href="<?php comments_link(); ?>"><i class="icon-default-style steadysets-icon-chat"></i> <?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a>
+											<a href="<?php comments_link(); ?>"><i class="icon-default-style steadysets-icon-chat"></i> <?php comments_number( __('No Comments', tavoweb), __('One Comment ', tavoweb), __('% Comments', tavoweb) ); ?></a>
 										</li>
 											<li>
 									   		<?php echo '<span class="n-shortcode">'.nectar_love('return').'</span>'; ?>
@@ -4622,24 +4622,24 @@ if ( !function_exists( 'nectar_page_header' ) ) {
 										
 											//facebook
 											if(!empty($options['blog-facebook-sharing']) && $options['blog-facebook-sharing'] == 1) { 
-												echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
+												echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
 											}
 											//twitter
 											if(!empty($options['blog-twitter-sharing']) && $options['blog-twitter-sharing'] == 1) {
-												echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
+												echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', tavoweb)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
 											}
 											//google plus
 											if(!empty($options['blog-google-plus-sharing']) && $options['blog-google-plus-sharing'] == 1) {
-												echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
+												echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
 											}
 											
 											//linkedIn
 											if(!empty($options['blog-linkedin-sharing']) && $options['blog-linkedin-sharing'] == 1) {
-												echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
+												echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
 											}
 											//pinterest
 											if(!empty($options['blog-pinterest-sharing']) && $options['blog-pinterest-sharing'] == 1) {
-												echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
+												echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', tavoweb)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
 											}
 											
 										  echo '</div></li>';
@@ -4681,9 +4681,9 @@ if ( !function_exists( 'nectar_page_header' ) ) {
 								<?php // portfolio filters
 									if( $page_template == 'template-portfolio.php' && $display_sortable == '1' && $inline_filters == '0') { ?>
 									<div class="<?php echo $filters_id;?>" instance="0">
-											<a href="#" data-sortable-label="<?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] :'Sort Portfolio'; ?>" id="sort-portfolio"><span><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',NECTAR_THEME_NAME); ?></span> <i class="icon-angle-down"></i></a> 
+											<a href="#" data-sortable-label="<?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] :'Sort Portfolio'; ?>" id="sort-portfolio"><span><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',tavoweb); ?></span> <i class="icon-angle-down"></i></a> 
 										<ul>
-										   <li><a href="#" data-filter="*"><?php echo __('All', NECTAR_THEME_NAME); ?></a></li>
+										   <li><a href="#" data-filter="*"><?php echo __('All', tavoweb); ?></a></li>
 						               	   <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'project-type', 'show_option_none'   => '', 'walker' => new Walker_Portfolio_Filter())); ?>
 										</ul>
 									</div>
@@ -4881,10 +4881,10 @@ if ( !function_exists( 'nectar_page_header' ) ) {
 						if( $page_template == 'template-portfolio.php' && $display_sortable == '1' && $inline_filters == '0') { ?>
 						<div class="<?php echo $filters_id;?>" instance="0">
 							
-							<a href="#" data-sortable-label="<?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] :'Sort Portfolio'; ?>" id="sort-portfolio"><span><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',NECTAR_THEME_NAME); ?></span> <i class="icon-angle-down"></i></a> 
+							<a href="#" data-sortable-label="<?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] :'Sort Portfolio'; ?>" id="sort-portfolio"><span><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',tavoweb); ?></span> <i class="icon-angle-down"></i></a> 
 							
 							<ul>
-							   <li><a href="#" data-filter="*"><?php echo __('All', NECTAR_THEME_NAME); ?></a></li>
+							   <li><a href="#" data-filter="*"><?php echo __('All', tavoweb); ?></a></li>
 			               	   <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'project-type', 'show_option_none'   => '', 'walker' => new Walker_Portfolio_Filter())); ?>
 							</ul>
 						</div>
@@ -4908,37 +4908,37 @@ if ( !function_exists( 'nectar_page_header' ) ) {
 			if(is_author()){
 
 				$heading =  get_the_author();
-				$subtitle = __('All Posts By', NECTAR_THEME_NAME );
+				$subtitle = __('All Posts By', tavoweb );
 
 			} else if(is_category()) {
 
 				$heading =  single_cat_title( '', false );
-				$subtitle = __('Category', NECTAR_THEME_NAME );
+				$subtitle = __('Category', tavoweb );
 
 			} else if(is_tag()) {
 
 				$heading =  wp_title("",false);
-				$subtitle = __('Tag', NECTAR_THEME_NAME );
+				$subtitle = __('Tag', tavoweb );
 
 			} else if(is_date()){
 
 				if ( is_day() ) :
 
 					$heading = get_the_date();
-					$subtitle = __('Daily Archives', NECTAR_THEME_NAME );
+					$subtitle = __('Daily Archives', tavoweb );
 				
 				elseif ( is_month() ) :
 
-					$heading = get_the_date( _x( 'F Y', 'monthly archives date format', NECTAR_THEME_NAME ) );
-					$subtitle = __('Monthly Archives', NECTAR_THEME_NAME );
+					$heading = get_the_date( _x( 'F Y', 'monthly archives date format', tavoweb ) );
+					$subtitle = __('Monthly Archives', tavoweb );
 
 				elseif ( is_year() ) :
 
-					$heading =  get_the_date( _x( 'Y', 'yearly archives date format', NECTAR_THEME_NAME ) );
-					$subtitle = __('Yearly Archives', NECTAR_THEME_NAME );
+					$heading =  get_the_date( _x( 'Y', 'yearly archives date format', tavoweb ) );
+					$subtitle = __('Yearly Archives', tavoweb );
 
 				else :
-					$heading = __( 'Archives', NECTAR_THEME_NAME );
+					$heading = __( 'Archives', tavoweb );
 
 				endif;
 			} else {
@@ -5193,15 +5193,15 @@ if ( !function_exists( 'nectar_pagination' ) ) {
 				  $query_type = (count($_GET)) ? '&' : '?';	
 			      $format = empty( $permalink_structure ) ? $query_type.'paged=%#%' : 'page/%#%/';  
 				
-				  echo '<div id="pagination" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">';
+				  echo '<div id="pagination" data-is-text="'.__("All items loaded", tavoweb).'">';
 				   
 			      echo paginate_links(array(  
 			          'base' => get_pagenum_link(1) . '%_%',  
 			          'format' => $format,  
 			          'current' => $current,  
 			          'total' => $total_pages,  
-			          'prev_text'    => __('Previous',NECTAR_THEME_NAME),
-    				  'next_text'    => __('Next',NECTAR_THEME_NAME)
+			          'prev_text'    => __('Previous',tavoweb),
+    				  'next_text'    => __('Next',tavoweb)
 			        )); 
 					
 				  echo  '</div>'; 
@@ -5212,7 +5212,7 @@ if ( !function_exists( 'nectar_pagination' ) ) {
 		else{
 			
 			if( get_next_posts_link() || get_previous_posts_link() ) { 
-				echo '<div id="pagination" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">
+				echo '<div id="pagination" data-is-text="'.__("All items loaded", tavoweb).'">
 				      <div class="prev">'.get_previous_posts_link('&laquo; Previous').'</div>
 				      <div class="next">'.get_next_posts_link('NextPrevious &raquo;','').'</div>
 			          </div>';
@@ -5472,8 +5472,8 @@ if($woocommerce) {
  
 add_filter( 'woocommerce_pagination_args' , 'nectar_override_pagination_args' );
 function nectar_override_pagination_args( $args ) {
-	$args['prev_text'] = __( 'Previous', NECTAR_THEME_NAME );
-	$args['next_text'] = __( 'Next', NECTAR_THEME_NAME );
+	$args['prev_text'] = __( 'Previous', tavoweb );
+	$args['next_text'] = __( 'Next', tavoweb );
 	return $args;
 }
 
@@ -5777,7 +5777,7 @@ function nectar_header_cart_output() {
 			</div>
 			
 			<div class="cart-notification">
-				<span class="item-name"></span> <?php echo __('was successfully added to your cart.', NECTAR_THEME_NAME); ?>
+				<span class="item-name"></span> <?php echo __('was successfully added to your cart.', tavoweb); ?>
 			</div>
 			
 			<?php
@@ -5834,7 +5834,7 @@ function review_quickview(){
 				// portfolio social sharting icons
 				if( !empty($options['woo_social']) && $options['woo_social'] == 1 ) {
 					
-					echo '<li class="meta-share-count"><a href="#"><i class="icon-default-style steadysets-icon-share"></i><span class="share-count-total">0</span> <span class="plural">'. __('Shares',NECTAR_THEME_NAME) . '</span> <span class="singular">'. __('Share',NECTAR_THEME_NAME) .'</span></a> <div class="nectar-social">';
+					echo '<li class="meta-share-count"><a href="#"><i class="icon-default-style steadysets-icon-share"></i><span class="share-count-total">0</span> <span class="plural">'. __('Shares',tavoweb) . '</span> <span class="singular">'. __('Share',tavoweb) .'</span></a> <div class="nectar-social">';
 
 					echo '<div class="nectar-social woo">';
 					
@@ -5849,12 +5849,12 @@ function review_quickview(){
 
 					//google plus
 					if(!empty($options['woo-google-plus-sharing']) && $options['woo-google-plus-sharing'] == 1) {
-						echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
+						echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
 					}
 					
 					//linkedIn
 					if(!empty($options['woo-linkedin-sharing']) && $options['woo-linkedin-sharing'] == 1) {
-						echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
+						echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
 					}
 
 					//pinterest

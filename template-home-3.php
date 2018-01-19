@@ -70,7 +70,7 @@ if($nectar_disable_home_slider != true) { ?>
 								
 								 <?php 
 								 //mobile more info button for video
-								 if( !empty($video_embed) || !empty($video_m4v)) { echo '<div><a href="#" class="more-info"><span class="mi">'.__("More Info",NECTAR_THEME_NAME).'</span><span class="btv">'.__("Back to Video",NECTAR_THEME_NAME).'</span></a></div>'; } ?>
+								 if( !empty($video_embed) || !empty($video_m4v)) { echo '<div><a href="#" class="more-info"><span class="mi">'.__("More Info",tavoweb).'</span><span class="btv">'.__("Back to Video",tavoweb).'</span></a></div>'; } ?>
 								 
 								 <?php $caption = get_post_meta($post->ID, '_nectar_slider_caption', true); ?>
 								<h2 data-has-caption="<?php echo (!empty($caption)) ? '1' : '0'; ?>"><span>
@@ -194,10 +194,10 @@ if($nectar_disable_home_slider != true) { ?>
 								
 								//image
 							    else {
-							       echo '<a href="'. $featured_image[0].'" class="pp">'.__("View Larger", NECTAR_THEME_NAME).'</a> ';
+							       echo '<a href="'. $featured_image[0].'" class="pp">'.__("View Larger", tavoweb).'</a> ';
 							    }
 		
-								 echo '<a href="' . $the_project_link . '">'.__("More Details", NECTAR_THEME_NAME).'</a>'; ?>
+								 echo '<a href="' . $the_project_link . '">'.__("More Details", tavoweb).'</a>'; ?>
 								 
 							</div><!--/vert-center-->
 							
@@ -385,7 +385,7 @@ if($nectar_disable_home_slider != true) { ?>
 					<div class="post-header">
 						<h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>	
 						<?php the_author_posts_link(); ?> | <?php the_category(', '); ?> | <a href="<?php comments_link(); ?>">
-						<?php comments_number( __('No Comments',NECTAR_THEME_NAME), __('One Comment',NECTAR_THEME_NAME), '% '. __('Comments',NECTAR_THEME_NAME) ); ?></a>
+						<?php comments_number( __('No Comments',tavoweb), __('One Comment',tavoweb), '% '. __('Comments',tavoweb) ); ?></a>
 					</div><!--/post-header-->
 					
 					<?php the_excerpt(); ?>

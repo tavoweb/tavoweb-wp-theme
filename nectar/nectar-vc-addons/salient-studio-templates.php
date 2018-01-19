@@ -8,19 +8,19 @@ add_action( 'vc_load_default_templates_action','custom_studio_templates_for_vc' 
 function custom_studio_templates_for_vc() {
 
 $cat_display_names = array(
-	'about' => __('About', NECTAR_THEME_NAME),
-	'blog' => __('Blog', NECTAR_THEME_NAME),
-	'cta' => __('Call To Action', NECTAR_THEME_NAME),
-	'counters' => __('Counters', NECTAR_THEME_NAME),
-	'general' => __('General', NECTAR_THEME_NAME),
-	'icons' => __('Icons', NECTAR_THEME_NAME),
-	'hero_section' => __('Hero Section', NECTAR_THEME_NAME),
-	'google_map' => __('Google Map', NECTAR_THEME_NAME),
-	'portfolio' => __('Project', NECTAR_THEME_NAME),
-	'pricing' => __('Pricing', NECTAR_THEME_NAME),
-	'services' => __('Services', NECTAR_THEME_NAME),
-	'team' => __('Team', NECTAR_THEME_NAME),
-	'testimonials' => __('Testimonials', NECTAR_THEME_NAME)
+	'about' => __('About', tavoweb),
+	'blog' => __('Blog', tavoweb),
+	'cta' => __('Call To Action', tavoweb),
+	'counters' => __('Counters', tavoweb),
+	'general' => __('General', tavoweb),
+	'icons' => __('Icons', tavoweb),
+	'hero_section' => __('Hero Section', tavoweb),
+	'google_map' => __('Google Map', tavoweb),
+	'portfolio' => __('Project', tavoweb),
+	'pricing' => __('Pricing', tavoweb),
+	'services' => __('Services', tavoweb),
+	'team' => __('Team', tavoweb),
+	'testimonials' => __('Testimonials', tavoweb)
 );
 
 

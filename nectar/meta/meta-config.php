@@ -68,8 +68,8 @@ function nectar_create_meta_box( $post, $meta_box )
 				echo '<td><input type="hidden" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . ($meta ? $meta : $field['std']) . '" />';
 		        echo '<img class="redux-opts-screenshot" id="redux-opts-screenshot-' . $field['id'] . '" src="' . ($meta ? $meta : $field['std']) . '" />';
 		        if( ($meta ? $meta : $field['std']) == '') {$remove = ' style="display:none;"'; $upload = ''; } else {$remove = ''; $upload = ' style="display:none;"'; }
-		        echo ' <a data-update="Select File" data-choose="Choose a File" href="javascript:void(0);"class="redux-opts-upload button-secondary"' . $upload . ' rel-id="' . $field['id'] . '">' . __('Upload', NECTAR_THEME_NAME) . '</a>';
-		        echo ' <a href="javascript:void(0);" class="redux-opts-upload-remove"' . $remove . ' rel-id="' . $field['id'] . '">' . __('Remove Upload', NECTAR_THEME_NAME) . '</a></td>';
+		        echo ' <a data-update="Select File" data-choose="Choose a File" href="javascript:void(0);"class="redux-opts-upload button-secondary"' . $upload . ' rel-id="' . $field['id'] . '">' . __('Upload', tavoweb) . '</a>';
+		        echo ' <a href="javascript:void(0);" class="redux-opts-upload-remove"' . $remove . ' rel-id="' . $field['id'] . '">' . __('Remove Upload', tavoweb) . '</a></td>';
 		        
 				break;
 				
@@ -110,8 +110,8 @@ function nectar_create_meta_box( $post, $meta_box )
 				 
 				echo '<td><input type="text" class="file_display_text" id="' . $field['id'] . '" name="nectar_meta[' . $field['id'] . ']" value="' . ($meta ? $meta : $field['std']) . '" />';
 		        if( ($meta ? $meta : $field['std']) == '') {$remove = ' style="display:none;"'; $upload = ''; } else {$remove = ''; $upload = ' style="display:none;"'; }
-		        echo ' <a data-update="Select File" data-choose="Choose a File" href="javascript:void(0);"class="redux-opts-media-upload button-secondary"' . $upload . ' rel-id="' . $field['id'] . '">' . __('Add Media', NECTAR_THEME_NAME) . '</a>';
-		        echo ' <a href="javascript:void(0);" class="redux-opts-upload-media-remove"' . $remove . ' rel-id="' . $field['id'] . '">' . __('Remove Media', NECTAR_THEME_NAME) . '</a></td>';
+		        echo ' <a data-update="Select File" data-choose="Choose a File" href="javascript:void(0);"class="redux-opts-media-upload button-secondary"' . $upload . ' rel-id="' . $field['id'] . '">' . __('Add Media', tavoweb) . '</a>';
+		        echo ' <a href="javascript:void(0);" class="redux-opts-upload-media-remove"' . $remove . ' rel-id="' . $field['id'] . '">' . __('Remove Media', tavoweb) . '</a></td>';
 		        
 				break;
 				

@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 		<div class="row">
 			<div class="col span_12">
 				<div class="col span_12 section-title">
-					<h1><?php echo __('Results For', NECTAR_THEME_NAME); ?><span>"<?php echo esc_html( get_search_query( false ) ); ?>"</span></h1>
+					<h1><?php echo __('Results For', tavoweb); ?><span>"<?php echo esc_html( get_search_query( false ) ); ?>"</span></h1>
 					<?php if($theme_skin == 'material' && $wp_query->found_posts) echo '<span class="result-num">' . $wp_query->found_posts . ' results found </span>'; ?>
 				</div>
 			</div>
@@ -64,7 +64,7 @@ jQuery(document).ready(function($){
 										<?php if(has_post_thumbnail( $post->ID )) {	
 											echo '<a href="'.get_permalink().'">'.get_the_post_thumbnail($post->ID, 'full', array('title' => '')).'</a>'; 
 										} ?>
-										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Blog Post', NECTAR_THEME_NAME); ?></span></h2>
+										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Blog Post', tavoweb); ?></span></h2>
 									</div>
 								</article><!--/search-result-->	
 							<?php }
@@ -73,7 +73,7 @@ jQuery(document).ready(function($){
 								<article class="result">
 									<div class="inner-wrap">
 										<span class="bottom-line"></span>
-										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Page', NECTAR_THEME_NAME); ?></span></h2>	
+										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Page', tavoweb); ?></span></h2>	
 										
 										<?php if(has_excerpt()) the_excerpt(); ?>
 									</div>
@@ -87,7 +87,7 @@ jQuery(document).ready(function($){
 										<?php if(has_post_thumbnail( $post->ID )) {	
 											echo '<a href="'.get_permalink().'">'.get_the_post_thumbnail($post->ID, 'full', array('title' => '')).'</a>'; 
 										} ?>
-										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Portfolio Item', NECTAR_THEME_NAME); ?></span></h2>
+										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Portfolio Item', tavoweb); ?></span></h2>
 									</div>
 								</article><!--/search-result-->		
 							<?php }
@@ -99,7 +99,7 @@ jQuery(document).ready(function($){
 										<?php if(has_post_thumbnail( $post->ID )) {	
 											echo '<a href="'.get_permalink().'">'. get_the_post_thumbnail($post->ID, 'full', array('title' => '')).'</a>'; 
 										} ?>
-										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Product', NECTAR_THEME_NAME); ?></span></h2>	
+										<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span><?php echo __('Product', tavoweb); ?></span></h2>	
 									</div>
 								</article><!--/search-result-->	
 							<?php } else { ?>
@@ -118,7 +118,7 @@ jQuery(document).ready(function($){
 						
 					<?php endwhile; 
 					
-					else: echo "<p>" . __('No results found', NECTAR_THEME_NAME) . "</p>"; endif;?>
+					else: echo "<p>" . __('No results found', tavoweb) . "</p>"; endif;?>
 				
 						
 				</div><!--/search-results-->

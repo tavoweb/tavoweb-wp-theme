@@ -1194,23 +1194,23 @@ function nectar_social_buttons($atts, $content = null) {
     }
 	
 	if($facebook == 'true'){
-    	$buttons .= "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
+    	$buttons .= "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
     }
 	
 	if($twitter == 'true'){
-    	$buttons .= "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
+    	$buttons .= "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', tavoweb)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
     }
 
 	if($google_plus == 'true'){
-    	$buttons .= "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> <span class='count'></span></a>";
+    	$buttons .= "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-google-plus'></i> <span class='count'></span></a>";
     }
 	
 	if($linkedin == 'true'){
-    	$buttons .= "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> <span class='count'></span></a>";
+    	$buttons .= "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', tavoweb)."'> <i class='fa fa-linkedin'></i> <span class='count'></span></a>";
     }
 	
 	if($pinterest == 'true'){
-    	$buttons .= "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
+    	$buttons .= "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', tavoweb)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
     }
 	
 	$buttons .= '</div>';
@@ -1288,10 +1288,10 @@ function nectar_portfolio_processing($atts, $content = null) {
 	 	?>
 		<div class="<?php echo $filters_id . ' '; echo $filters_width;  if($layout == 'constrained_fullwidth') echo ' fullwidth-constrained '; if($span_num != 'elastic-portfolio-item' || $layout == 'constrained_fullwidth') echo 'non-fw'; ?>" data-alignment="<?php echo $filter_alignment; ?>" data-color-scheme="<?php echo strtolower($filter_color); ?>">
 			<div class="container">
-				<?php if($filter_alignment != 'center' && $filter_alignment != 'left') { ?> <span id="current-category"><?php echo __('All', NECTAR_THEME_NAME); ?></span> <?php } ?>
+				<?php if($filter_alignment != 'center' && $filter_alignment != 'left') { ?> <span id="current-category"><?php echo __('All', tavoweb); ?></span> <?php } ?>
 				<ul>
-				   <?php if($filter_alignment != 'center' && $filter_alignment != 'left') { ?> <li id="sort-label"><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',NECTAR_THEME_NAME); ?>:</li> <?php } ?>
-				   <li><a href="#" data-filter="*"><?php echo __('All', NECTAR_THEME_NAME); ?></a></li>
+				   <?php if($filter_alignment != 'center' && $filter_alignment != 'left') { ?> <li id="sort-label"><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',tavoweb); ?>:</li> <?php } ?>
+				   <li><a href="#" data-filter="*"><?php echo __('All', tavoweb); ?></a></li>
                	   <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'project-type', 'show_option_none'   => '', 'walker' => new Walker_Portfolio_Filter())); ?>
 				</ul>
 				<div class="clear"></div>
@@ -1299,9 +1299,9 @@ function nectar_portfolio_processing($atts, $content = null) {
 		</div>
 	<?php } else if($enable_sortable == 'true' && $horizontal_filters != 'true') { ?>
 		<div class="<?php echo $filters_id;?>" data-color-scheme="<?php echo strtolower($filter_color); ?>">
-			<a href="#" data-sortable-label="<?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] :'Sort Portfolio'; ?>" id="sort-portfolio"><span><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',NECTAR_THEME_NAME); ?></span> <i class="icon-angle-down"></i></a> 
+			<a href="#" data-sortable-label="<?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] :'Sort Portfolio'; ?>" id="sort-portfolio"><span><?php echo (!empty($options['portfolio-sortable-text'])) ? $options['portfolio-sortable-text'] : __('Sort Portfolio',tavoweb); ?></span> <i class="icon-angle-down"></i></a> 
 			<ul>
-			   <li><a href="#" data-filter="*"><?php echo __('All', NECTAR_THEME_NAME); ?></a></li>
+			   <li><a href="#" data-filter="*"><?php echo __('All', tavoweb); ?></a></li>
            	   <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'project-type', 'show_option_none'   => '', 'walker' => new Walker_Portfolio_Filter())); ?>
 			</ul>
 		</div>
@@ -1701,11 +1701,11 @@ function nectar_portfolio_processing($atts, $content = null) {
 
 										       echo '<a href="'. $featured_image[0].'"'; 
 										       if(!empty($project_image_caption)) echo ' title="'.$project_image_caption.'"';
-										       echo ' class="pretty_photo default-link">'.__("View Larger", NECTAR_THEME_NAME).'</a> ';
+										       echo ' class="pretty_photo default-link">'.__("View Larger", tavoweb).'</a> ';
 										    }
 											
 											if($lightbox_only != 'true') {
-										    	echo '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", NECTAR_THEME_NAME).'</a>'; 
+										    	echo '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", tavoweb).'</a>'; 
 										    } ?>
 										    
 										</div><!--/vert-center-->
@@ -2871,7 +2871,7 @@ function nectar_portfolio_processing($atts, $content = null) {
 			   	    // $format = empty( $permalink_structure ) ? $query_type.'paged=%#%' : 'page/%#%/';  
 				    if ($total_pages > 1){  
 				      
-					  echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class .'" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">';
+					  echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class .'" data-is-text="'.__("All items loaded", tavoweb).'">';
 					   
 				      echo paginate_links(array(  
 				          'base' => get_pagenum_link(1) .'%_%', 
@@ -2891,7 +2891,7 @@ function nectar_portfolio_processing($atts, $content = null) {
 				$masonry_padding = ($project_style == '1') ? 'alt-style-padding' : null;
 				
 				if( get_next_posts_link() || get_previous_posts_link() ) { 
-					echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">
+					echo '<div id="pagination" class="'.$fw_pagination.' '.$masonry_padding. $infinite_scroll_class.'" data-is-text="'.__("All items loaded", tavoweb).'">
 					      <div class="prev">'.get_previous_posts_link('&laquo; Previous Entries').'</div>
 					      <div class="next">'.get_next_posts_link('Next Entries &raquo;','').'</div>
 				          </div>';
@@ -3067,7 +3067,7 @@ function nectar_blog_processing($atts, $content = null) {
 				      $query_type = (count($_GET)) ? '&' : '?';	
 			      	  $format = empty( $permalink_structure ) ? $query_type.'paged=%#%' : 'page/%#%/';  
 					
-					  echo '<div id="pagination" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">';
+					  echo '<div id="pagination" data-is-text="'.__("All items loaded", tavoweb).'">';
 					   
 				      echo paginate_links(array(  
 				          'base' => get_pagenum_link(1) . '%_%',  
@@ -3084,7 +3084,7 @@ function nectar_blog_processing($atts, $content = null) {
 			else if($enable_pagination == 'true'){
 				
 				if( get_next_posts_link() || get_previous_posts_link() ) { 
-					echo '<div id="pagination" data-is-text="'.__("All items loaded", NECTAR_THEME_NAME).'">
+					echo '<div id="pagination" data-is-text="'.__("All items loaded", tavoweb).'">
 					      <div class="prev">'.get_previous_posts_link('&laquo; Previous Entries').'</div>
 					      <div class="next">'.get_next_posts_link('Next Entries &raquo;','').'</div>
 				          </div>';
@@ -3345,7 +3345,7 @@ function nectar_recent_posts($atts, $content = null) {
 							<div class="post-header">
 								<h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>	
 								<span class="meta-author"><?php the_author_posts_link(); ?> </span> <span class="meta-category"> | <?php the_category(', '); ?> </span> <span class="meta-comment-count"> | <a href="<?php comments_link(); ?>">
-								<?php comments_number( __('No Comments',NECTAR_THEME_NAME), __('One Comment',NECTAR_THEME_NAME), '% '. __('Comments',NECTAR_THEME_NAME) ); ?></a> </span>
+								<?php comments_number( __('No Comments',tavoweb), __('One Comment',tavoweb), '% '. __('Comments',tavoweb) ); ?></a> </span>
 							</div><!--/post-header-->
 							
 							<?php 
@@ -3357,14 +3357,14 @@ function nectar_recent_posts($atts, $content = null) {
 
 							<a href="<?php the_permalink(); ?>"></a>
 							<div class="post-header">
-								<span class="meta"> <?php echo get_the_date() . ' ' . __('in',NECTAR_THEME_NAME); ?> <?php the_category(', '); ?> </span> 
+								<span class="meta"> <?php echo get_the_date() . ' ' . __('in',tavoweb); ?> <?php the_category(', '); ?> </span> 
 								<h3 class="title"><?php the_title(); ?></h3>	
 							</div><!--/post-header-->
 							<?php 
                 $excerpt_length = (!empty($options['blog_excerpt_length'])) ? intval($options['blog_excerpt_length']) : 30; 
   							echo '<div class="excerpt">' . nectar_excerpt($excerpt_length) . '</div>';
               ?>
-							<span><?php echo __('Read More',NECTAR_THEME_NAME); ?> <i class="icon-button-arrow"></i></span>
+							<span><?php echo __('Read More',tavoweb); ?> <i class="icon-button-arrow"></i></span>
 
 						<?php } else if($style == 'title_only') { ?>
 
@@ -3606,7 +3606,7 @@ function nectar_recent_posts($atts, $content = null) {
               }
           
             
-            echo '<div class="grav-wrap"><a href="'.get_author_posts_url($post->post_author).'">'.get_avatar( get_the_author_meta('email'), 70,  null, get_the_author() ). '</a><div class="text"><span>'.__('By',NECTAR_THEME_NAME).' <a href="'.get_author_posts_url($post->post_author).'" rel="author">' .get_the_author().'</a></span><span> '.__('In',NECTAR_THEME_NAME).'</span> '. trim( $cat_output) . '</div></div>'; ?>
+            echo '<div class="grav-wrap"><a href="'.get_author_posts_url($post->post_author).'">'.get_avatar( get_the_author_meta('email'), 70,  null, get_the_author() ). '</a><div class="text"><span>'.__('By',tavoweb).' <a href="'.get_author_posts_url($post->post_author).'" rel="author">' .get_the_author().'</a></span><span> '.__('In',tavoweb).'</span> '. trim( $cat_output) . '</div></div>'; ?>
           
             <h2 class="post-ref-<?php echo $i; ?>"><a href=" <?php echo get_permalink(); ?>" class="full-slide-link"> <?php echo the_title(); ?> </a></h2>
             <?php echo '<div class="excerpt">' . nectar_excerpt(20) . '</div>';  ?>
@@ -3626,7 +3626,7 @@ function nectar_recent_posts($atts, $content = null) {
           		$button_color = 'm-extra-color-gradient-2';
           	} 
             ?>
-            <a class="nectar-button large regular <?php echo $button_color .  $regular_btn_class; ?> has-icon" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read More', NECTAR_THEME_NAME); ?></span> <i class="icon-button-arrow"></i></a>
+            <a class="nectar-button large regular <?php echo $button_color .  $regular_btn_class; ?> has-icon" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read More', tavoweb); ?></span> <i class="icon-button-arrow"></i></a>
             
           
           </div>
@@ -3743,7 +3743,7 @@ function nectar_recent_posts($atts, $content = null) {
               }
           
             
-            echo '<div class="grav-wrap"><a href="'.get_author_posts_url($post->post_author).'">'.get_avatar( get_the_author_meta('email'), 70,  null, get_the_author() ). '</a><div class="text"><span>'.__('By',NECTAR_THEME_NAME).' <a href="'.get_author_posts_url($post->post_author).'" rel="author">' .get_the_author().'</a></span><span> '.__('In',NECTAR_THEME_NAME).'</span> '. trim( $cat_output) . '</div></div>'; ?>
+            echo '<div class="grav-wrap"><a href="'.get_author_posts_url($post->post_author).'">'.get_avatar( get_the_author_meta('email'), 70,  null, get_the_author() ). '</a><div class="text"><span>'.__('By',tavoweb).' <a href="'.get_author_posts_url($post->post_author).'" rel="author">' .get_the_author().'</a></span><span> '.__('In',tavoweb).'</span> '. trim( $cat_output) . '</div></div>'; ?>
           
             <h2 class="post-ref-<?php echo $i; ?>"><a href="<?php echo get_permalink(); ?>" class="full-slide-link"> <?php echo the_title(); ?> </a></h2>
             
@@ -3761,7 +3761,7 @@ function nectar_recent_posts($atts, $content = null) {
           		$button_color = 'm-extra-color-gradient-2';
           	} 
             ?>
-            <a class="nectar-button large regular <?php echo $button_color .  $regular_btn_class; ?> has-icon" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read Article', NECTAR_THEME_NAME); ?> </span><i class="icon-button-arrow"></i></a>
+            <a class="nectar-button large regular <?php echo $button_color .  $regular_btn_class; ?> has-icon" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read Article', tavoweb); ?> </span><i class="icon-button-arrow"></i></a>
             
           
           </div></div></div>
@@ -3889,9 +3889,9 @@ function nectar_recent_posts($atts, $content = null) {
             ?>
             
             <?php if(!empty($options['theme-skin']) && $options['theme-skin'] == 'material') { ?>
-              <a class="nectar-button large regular  <?php echo $button_color .  $regular_btn_class; ?>" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read Article',NECTAR_THEME_NAME); ?> </span></a>
+              <a class="nectar-button large regular  <?php echo $button_color .  $regular_btn_class; ?>" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read Article',tavoweb); ?> </span></a>
             <?php } else { ?>
-                <a class="nectar-button large regular  <?php echo $button_color .  $regular_btn_class; ?> has-icon" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read Article',NECTAR_THEME_NAME); ?> </span><i class="icon-button-arrow"></i></a>
+                <a class="nectar-button large regular  <?php echo $button_color .  $regular_btn_class; ?> has-icon" href="<?php echo get_permalink(); ?>" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" ><span><?php echo __('Read Article',tavoweb); ?> </span><i class="icon-button-arrow"></i></a>
             <?php } ?>
             
           </div>
@@ -4168,7 +4168,7 @@ function nectar_recent_projects($atts, $content = null) {
 						
 						//image
 					    else {
-					       $media .= '<a href="'. $featured_image[0].'" class="pretty_photo default-link">'.__("View Larger", NECTAR_THEME_NAME).'</a> ';
+					       $media .= '<a href="'. $featured_image[0].'" class="pretty_photo default-link">'.__("View Larger", tavoweb).'</a> ';
 					    }
 						
 						$project_excerpt = get_post_meta($post->ID, '_nectar_project_excerpt', true);
@@ -4189,7 +4189,7 @@ function nectar_recent_projects($atts, $content = null) {
 							$project_img = '<img class="custom-thumbnail" src="'.nectar_ssl_check($custom_thumbnail).'" alt="'. get_the_title() .'" />';
 						}
 						
-						$more_details_html = ($lightbox_only != 'true') ? '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", NECTAR_THEME_NAME).'</a>' : null; 
+						$more_details_html = ($lightbox_only != 'true') ? '<a class="default-link" href="' . $the_project_link . '">'.__("More Details", tavoweb).'</a>' : null; 
 					    
 						$project_accent_color = get_post_meta($post->ID, '_nectar_project_accent_color', true);	 
 						if(!empty($project_accent_color)) { $project_accent_color_markup = 'data-project-color="' . $project_accent_color .'"'; } else { $project_accent_color_markup = 'data-default-color="true"';} 
@@ -4579,7 +4579,7 @@ function nectar_recent_projects($atts, $content = null) {
 
 								$recent_projects_content .='<div class="project-slide '.$active_class.'">';
 								$recent_projects_content .= '<div class="bg-outer-wrap"><div class="bg-outer"><div class="bg-inner-wrap" style="background-color: '.$project_accent_color.';"><div class="slide-bg" style="background-image:url('.$project_img.')"></div></div></div></div>';
-								$recent_projects_content .= '<div class="project-info"><div class="container normal-container"><h1>'. get_the_title(). '</h1><a href="'.$the_project_link.'">' . __("View Project", NECTAR_THEME_NAME) . '</a></div></div>';
+								$recent_projects_content .= '<div class="project-info"><div class="container normal-container"><h1>'. get_the_title(). '</h1><a href="'.$the_project_link.'">' . __("View Project", tavoweb) . '</a></div></div>';
 								$recent_projects_content .= '</div><!--project slide-->';
 
 								$projcount++;

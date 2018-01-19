@@ -106,7 +106,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 						$categories = get_the_category();
 						if ( ! empty( $categories ) ) {
 
-							echo '<span class="in">'. __('In', NECTAR_THEME_NAME) . ' </span>';
+							echo '<span class="in">'. __('In', tavoweb) . ' </span>';
 
 							$output = null;
 							$cat_count = 0;
@@ -191,7 +191,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 					$use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_excerpt'] == '1') ? 'true' : 'false'; 
 
 					if(empty( $post->post_excerpt ) && $use_excerpt != 'true') {
-						the_content('<span class="continue-reading">'. __("Continue Reading", NECTAR_THEME_NAME) . '</span>'); 
+						the_content('<span class="continue-reading">'. __("Continue Reading", tavoweb) . '</span>'); 
 					}
 					
 					//excerpt
@@ -202,7 +202,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 						the_excerpt();
 
 						echo '</div>';
-						echo '<a class="more-link" href="' . get_permalink() . '"><span class="continue-reading">'. __("Continue Reading", NECTAR_THEME_NAME) .'</span></a>';
+						echo '<a class="more-link" href="' . get_permalink() . '"><span class="continue-reading">'. __("Continue Reading", tavoweb) .'</span></a>';
 					} ?>
 
 				<?php } ?>
@@ -211,7 +211,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 				$below_content = get_the_content();
 				if(is_single() && !empty( $below_content )){ ?>
 					
-						<?php the_content('<span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) . '</span>'); ?>
+						<?php the_content('<span class="continue-reading">'. __("Read More", tavoweb) . '</span>'); ?>
 					
 				<?php } ?>
 				
@@ -293,7 +293,7 @@ $use_excerpt = (!empty($options['blog_auto_excerpt']) && $options['blog_auto_exc
 				$below_content = get_the_content();
 				if(is_single() && !empty( $below_content )){ ?>
 					<div class="quote-below-content">	
-						<?php the_content('<span class="continue-reading">'. __("Read More", NECTAR_THEME_NAME) . '</span>'); ?>
+						<?php the_content('<span class="continue-reading">'. __("Read More", tavoweb) . '</span>'); ?>
 					</div>
 				<?php } ?>
 				
